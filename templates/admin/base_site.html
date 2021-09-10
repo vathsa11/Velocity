@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+{%load static%}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"> <img src="{% static 'img/logo.png' %}" width="150" height="100" alt="Company Logo"><a href="{% url 'admin:index' %}">Velocity - JSSATE Transport</a></h1><hr style="margin-bottom: 50px;">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/adminstyle.css' %}">
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
